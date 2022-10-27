@@ -2,6 +2,12 @@
 
 > vue demo
 
+#这里提前帮大家避雷
+Nodejs的版本要拿14的
+这里建议下载nvm，来管理node.js的版本
+具体的操作步骤教程：
+https://www.mintimate.cn/2021/07/26/nvmNode/#管理与安装Node-js（使用方法2）
+
 ## Build Setup
 
 ``` bash

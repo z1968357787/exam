@@ -4,30 +4,36 @@
     <div class="title">我的练习</div>
     <div class="wrapper">
       <ul class="top">
-        <li class="order">
-          <el-badge :value="12" class="item" type="primary">
-            <span>全部</span>
-          </el-badge>
+        <li class="order" >
+          <a @click="exam1()">
+           <el-badge :value="12" class="item" type="primary">
+             <span>普通考试</span>
+           </el-badge>
+          </a>
         </li>
         <li class="order">
-          <el-badge :value="1" class="item" type="primary">
-            <span>未开始</span>
-          </el-badge>
+          <a @click="exam2()">
+           <el-badge :value="1" class="item" type="primary">
+             <span>行政能力</span>
+           </el-badge>
+          </a>
         </li>
         <li class="order">
           <el-badge :value="2" class="item" type="primary">
-            <span>已开始</span>
+            <span>申论能力</span>
           </el-badge>
         </li>
-        <li class="order">
+        <!--<li class="order">
           <el-badge :value="1" class="item">
             <span>已过期</span>
           </el-badge>
-        </li>
+        </li>-->
         <li class="search-li"><div class="icon"><input type="text" placeholder="试卷名称" class="search" v-model="key"><i class="el-icon-search"></i></div></li>
         <li><el-button type="primary" @click="search()">搜索试卷</el-button></li>
       </ul>
-      <ul class="paper" v-loading="loading">
+      <div v-if="examState==1">
+      </div>
+      <ul class="paper" v-loading="loading" v-if="examState==1">
         <li class="item" v-for="(item,index) in pagination.records" :key="index">
           <h4 @click="toExamMsg(item.examCode)">{{item.source}}</h4>
           <p class="name">{{item.source}}-{{item.description}}</p>
@@ -38,6 +44,7 @@
           </div>
         </li>
       </ul>
+
       <div class="pagination">
         <el-pagination
           @size-change="handleSizeChange"
@@ -54,6 +61,8 @@
 </template>
 
 <script>
+import {mapState} from "vuex";
+
 export default {
   // name: 'myExam'
   data() {
@@ -61,6 +70,7 @@ export default {
       loading: false,
       key: null, //搜索关键字
       allExam: null, //所有考试信息
+      examState: 1,
       pagination: { //分页后的考试信息
         current: 1, //当前页
         total: null, //记录条数
@@ -73,7 +83,7 @@ export default {
     this.loading = true
   },
   // watch: {
-    
+
   // },
   methods: {
     //获取当前所有考试信息
@@ -112,6 +122,12 @@ export default {
     toExamMsg(examCode) {
       this.$router.push({path: '/examMsg', query: {examCode: examCode}})
       console.log(examCode)
+    },
+    exam1() { //跳转考试模式
+      this.$data.examState=1;
+    },
+    exam2() { //跳转考试模式
+      this.$data.examState=2;
     }
   }
 }
@@ -274,6 +290,7 @@ export default {
   justify-content: space-around;
   flex-wrap: wrap;
 }
+
 .top .el-icon-search {
   position: absolute;
   right: 10px;

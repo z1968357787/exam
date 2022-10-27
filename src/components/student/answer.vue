@@ -43,7 +43,7 @@
                 <p>选择题部分</p>
                 <ul>
                   <li v-for="(list, index1) in topic[1]" :key="index1">
-                    <a href="javascript:;" 
+                    <a href="javascript:;"
                       @click="change(index1)"
                       :class="{'border': index == index1 && currentType == 1,'bg': bg_flag && topic[1][index1].isClick == true}">
                       <span :class="{'mark': topic[1][index1].isMark == true}"></span>
@@ -71,7 +71,7 @@
               <div class="final" @click="commit()">结束考试</div>
             </div>
           </div>
-        </transition>  
+        </transition>
         <!--右边选择答题区-->
         <transition name="slider-fade">
         <div class="right">
@@ -89,9 +89,9 @@
                 <el-radio :label="3">{{showAnswer.answerC}}</el-radio>
                 <el-radio :label="4">{{showAnswer.answerD}}</el-radio>
               </el-radio-group>
-              <div class="analysis" v-if="isPractice">
+              <div class="analysis" v-if="isPractice"><!--这里-->
                 <ul>
-                  <li> <el-tag type="success">正确姿势：</el-tag><span class="right">{{reduceAnswer.rightAnswer}}</span></li>
+                  <li> <el-tag type="success">正确答案：</el-tag><span class="right">{{reduceAnswer.rightAnswer}}</span></li>
                   <li><el-tag>题目解析：</el-tag></li>
                   <li>{{reduceAnswer.analysis == null ? '暂无解析': reduceAnswer.analysis}}</li>
                 </ul>
@@ -107,7 +107,7 @@
               </div>
               <div class="analysis" v-if="isPractice">
                 <ul>
-                  <li> <el-tag type="success">正确姿势：</el-tag><span class="right">{{topic[2][index].answer}}</span></li>
+                  <li> <el-tag type="success">正确答案：</el-tag><span class="right">{{topic[2][index].answer}}</span></li>
                   <li><el-tag>题目解析：</el-tag></li>
                   <li>{{topic[2][index].analysis == null ? '暂无解析': topic[2][index].analysis}}</li>
                 </ul>
@@ -120,7 +120,7 @@
               </el-radio-group>
               <div class="analysis" v-if="isPractice">
                 <ul>
-                  <li> <el-tag type="success">正确姿势：</el-tag><span class="right">{{topic[3][index].answer}}</span></li>
+                  <li> <el-tag type="success">正确答案：</el-tag><span class="right">{{topic[3][index].answer}}</span></li>
                   <li><el-tag>题目解析：</el-tag></li>
                   <li>{{topic[3][index].analysis == null ? '暂无解析': topic[3][index].analysis}}</li>
                 </ul>
@@ -136,7 +136,7 @@
           </div>
         </div>
         </transition>
-     </div> 
+     </div>
   </div>
 </template>
 
@@ -204,7 +204,7 @@ export default {
       this.userInfo.id = this.$cookies.get("cid")
     },
     calcuScore() { //计算答题分数
-      
+
     },
     getExamData() { //获取当前试卷所有信息
       let date = new Date()
@@ -290,7 +290,7 @@ export default {
           let part= this.showQuestion.split("()").length -1 //根据题目中括号的数量确定填空横线数量
           this.part = part
           this.number = this.topicCount[0] + index + 1
-        } 
+        }
       }else if(index >= len) {
         this.index = 0
         this.judge(this.index)
@@ -326,7 +326,7 @@ export default {
         data[this.index]["isClick"] = true
       }
       /* 保存学生答题选项 */
-      this.topic1Answer[this.index] = val 
+      this.topic1Answer[this.index] = val
     },
     getJudgeLabel(val) {  //获取判断题作答选项
       this.judgeAnswer[this.index] = val
@@ -339,10 +339,10 @@ export default {
     previous() { //上一题
       this.index --
       switch(this.currentType) {
-        case 1: 
+        case 1:
           this.change(this.index)
           break
-        case 2: 
+        case 2:
           this.fill(this.index)
           break
         case 3:
@@ -353,10 +353,10 @@ export default {
     next() { //下一题
       this.index ++
       switch(this.currentType) {
-        case 1: 
+        case 1:
           this.change(this.index)
           break
-        case 2: 
+        case 2:
           this.fill(this.index)
           break
         case 3:
@@ -455,11 +455,11 @@ export default {
           }).then(res => {
             if(res.data.code == 200) {
               this.$router.push({path:'/studentScore',query: {
-                score: finalScore, 
+                score: finalScore,
                 startTime: this.startTime,
                 endTime: this.endTime
               }})
-            }  
+            }
           })
         }).catch(() => {
           console.log("继续答题")
@@ -594,7 +594,7 @@ export default {
 }
 .content .topic {
   padding: 20px 0px;
-  padding-top: 30px; 
+  padding-top: 30px;
 }
 .right .content {
   background-color: #fff;
@@ -680,7 +680,7 @@ export default {
   justify-content: space-around;
   flex-wrap: wrap;
 }
-.l-bottom .item ul li a { 
+.l-bottom .item ul li a {
   position: relative;
   justify-content: center;
   display: inline-flex;

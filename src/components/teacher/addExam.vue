@@ -29,7 +29,15 @@
         <el-input v-model="form.totalScore"></el-input>
       </el-form-item>
       <el-form-item label="考试类型">
-        <el-input v-model="form.type"></el-input>
+        <!--<el-input v-model="form.type"></el-input>-->
+        <el-select v-model="form.type" placeholder="考试类型">
+          <el-option
+            v-for="item in examSelect"
+            :key="item.value"
+            :label="item.label"
+            :value="item.value">
+          </el-option>
+        </el-select>
       </el-form-item>
       <el-form-item label="考生提示">
         <el-input type="textarea" v-model="form.tips"></el-input>
@@ -46,6 +54,24 @@
 export default {
   data() {
     return {
+      examSelect: [ //考试类型
+        {
+          value: '模拟考试',
+          label: '模拟考试'
+        },
+        {
+          value: '普通测试',
+          label: '普通测试'
+        },
+        {
+          value: '行政能力',
+          label: '行政能力'
+        },
+        {
+          value: '申论能力',
+          label: '申论能力'
+        }
+      ],
       form: { //表单数据初始化
         source: null,
         description: null,
@@ -55,7 +81,7 @@ export default {
         examDate: null,
         totalTime: null,
         totalScore: null,
-        type: null,
+        type: '模拟考试',
         tips: null,
         paperId: null,
       }
@@ -97,7 +123,7 @@ export default {
     cancel() { //取消按钮
       this.form = {}
     },
-    
+
   }
 };
 </script>

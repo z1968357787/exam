@@ -5,11 +5,12 @@
       <el-col :span="24">
         <ul class="list">
           <li class="logo"><i class="iconfont icon-kaoshi"></i><span>Exam-Online</span></li>
-          <li><a href="javascript:;" @click="exam()">我的试卷</a></li>
-          <li><a href="javascript:;" @click="practice()">我的练习</a></li>
+          <li><a href="javascript:;" @click="exam()">模拟考试</a></li>
+          <li><a href="javascript:;" @click="written()">笔试模块</a></li>
+          <li><a href="javascript:;" @click="interview()">面试模块</a></li>
+          <li><a href="javascript:;" @click="practice()">基础模块</a></li>
           <li><router-link to="/scoreTable">我的分数</router-link></li>
           <li><router-link to="/message">给我留言</router-link></li>
-          <li><a href="javascript:;">待定</a></li>
           <li class="right" @mouseenter="flag = !flag" @mouseleave="flag = !flag">
             <a href="javascript:;"><i class="iconfont icon-Userselect icon"></i>{{user.userName}}</a>
             <div class="msg" v-if="flag">
@@ -66,12 +67,22 @@ export default {
     practice() { //跳转练习模式
       let isPractice = true
       this.$store.commit("practice", isPractice)
-      this.$router.push({path:'/startExam'})
+      this.$router.push({path:'/basicExam'})
     },
     exam() { //跳转考试模式
      let isPractice = false
       this.$store.commit("practice", isPractice)
       this.$router.push({path:'/student'})
+    },
+    written() { //跳转考试模式
+      let isPractice = true
+      this.$store.commit("practice", isPractice)
+      this.$router.push({path:'/startExam'})
+    },
+    interview() { //跳转考试模式
+      let isPractice = true
+      this.$store.commit("practice", isPractice)
+      this.$router.push({path:'/interviewExam'})
     }
   },
   computed:mapState(["isPractice"])

@@ -87,9 +87,14 @@ export default new Router({
         {path:'/startExam', component: () => import('@/components/student/startExam')},
         {path: '/manager', component: () => import('@/components/student/manager')},
         {path: '/examMsg', component: () => import('@/components/student/examMsg')},
+        {path: '/contentMsg', component: () => import('@/components/student/contentMsg')},
+        {path: '/interviewMsg', component: () => import('@/components/student/interviewMsg')},
         {path: '/message', component: () => import('@/components/student/message')},
         {path: '/studentScore', component: () => import("@/components/student/answerScore")},
-        {path: '/scoreTable', component: () => import("@/components/student/scoreTable")}
+        {path: '/interviewScore', component: () => import("@/components/student/interviewScore")},
+        {path: '/scoreTable', component: () => import("@/components/student/scoreTable")},
+        {path: '/basicExam', component: () => import("@/components/student/basicExam")},
+        {path: '/interviewExam', component: () => import("@/components/student/interviewExam")}
       ]
     },
     {path: '/answer',component: () => import('@/components/student/answer')}

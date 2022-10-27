@@ -9,7 +9,7 @@
         <li><el-button type="primary" @click="search()">搜索试卷</el-button></li>
       </ul>
       <ul class="paper" v-loading="loading">
-        <li class="item" v-for="(item,index) in pagination.records" :key="index">
+        <li class="item" v-for="(item,index) in pagination.records" :key="index" v-if="item.type=='模拟考试'">
           <h4 @click="toExamMsg(item.examCode)">{{item.source}}</h4>
           <p class="name">{{item.source}}-{{item.description}}</p>
           <div class="info">
@@ -45,7 +45,7 @@ export default {
       pagination: { //分页后的考试信息
         current: 1, //当前页
         total: null, //记录条数
-        size: 6 //每页条数
+        size: 20 //每页条数
       }
     }
   },
@@ -54,7 +54,7 @@ export default {
     this.loading = true
   },
   // watch: {
-    
+
   // },
   methods: {
     //获取当前所有考试信息

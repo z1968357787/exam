@@ -13,16 +13,16 @@
         <li><i class="iconfont icon-share"></i></li>
         <li class="right">
           <div>
-            <span class="count">总分</span>
-            <span class="score">{{score[0]+score[1]+score[2]}}</span>
+            <span class="count">评分</span>
+            <span class="score">92</span>
           </div>
         </li>
       </ul>
       <ul class="bottom">
         <li>更新于{{examData.examDate}}</li>
         <li>来自 {{examData.institute}}</li>
-        <li class="btn">{{examData.type}}</li>
-        <li class="right"><el-button @click="toAnswer(examData.examCode)">开始答题</el-button></li>
+        <li class="btn">好文章读背</li>
+        <li class="right"><el-button type="primary" icon="el-icon-share" @click="dialogVisible2 = true">好友分享</el-button></li>
       </ul>
       <ul class="info">
         <li @click="dialogVisible = true"><a href="javascript:;"><i class="iconfont icon-info"></i>读者须知</a></li>
@@ -33,10 +33,7 @@
         <el-collapse-item class="header" name="0">
           <template slot="title" class="stitle">
             <div class="title">
-              <span >我们为什么需要良好的家风</span><i class="header-icon el-icon-info"></i>
-              <!--<span class="time">{{examData.totalScore}}分 / {{examData.totalTime}}分钟</span>-->
-              <span class="time"></span>
-              <el-button type="primary" size="small">点击查看文章详情</el-button>
+              <span>我们为什么需要良好的家风</span><i class="header-icon el-icon-info"></i>
             </div>
           </template>
           <el-collapse class="inner">
@@ -50,10 +47,16 @@
       </el-collapse>
     </div>
     <!--考生须知对话框-->
-    <el-dialog title="阅读须知" :visible.sync="dialogVisible" width="30%" v-if="examState==1">
+    <el-dialog title="读者须知" :visible.sync="dialogVisible" width="30%" v-if="examState==1">
       <span>未经允许禁止转载</span>
       <span slot="footer" class="dialog-footer">
         <el-button @click="dialogVisible = false">知道了</el-button>
+      </span>
+    </el-dialog>
+    <el-dialog title="好友分享" :visible.sync="dialogVisible2" width="30%" v-if="examState==1">
+      <span class="big loc">分享成功</span>
+      <span slot="footer" class="dialog-footer">
+        <el-button @click="dialogVisible2 = false">知道了</el-button>
       </span>
     </el-dialog>
 
@@ -69,16 +72,16 @@
         <li><i class="iconfont icon-share"></i></li>
         <li class="right">
           <div>
-            <span class="count">总分</span>
-            <span class="score">{{score[0]+score[1]+score[2]}}</span>
+            <span class="count">评分</span>
+            <span class="score">95</span>
           </div>
         </li>
       </ul>
       <ul class="bottom">
         <li>更新于{{examData.examDate}}</li>
         <li>来自 {{examData.institute}}</li>
-        <li class="btn">{{examData.type}}</li>
-        <li class="right"><el-button @click="toAnswer(examData.examCode)">开始答题</el-button></li>
+        <li class="btn">名言名句</li>
+        <li class="right"><el-button type="primary" icon="el-icon-share" @click="dialogVisible2 = true">好友分享</el-button></li>
       </ul>
       <ul class="info">
         <li @click="dialogVisible = true"><a href="javascript:;"><i class="iconfont icon-info"></i>读者须知</a></li>
@@ -90,9 +93,6 @@
           <template slot="title" class="stitle">
             <div class="title">
               <span>周恩来的名言警句</span><i class="header-icon el-icon-info"></i>
-              <!--<span class="time">{{examData.totalScore}}分 / {{examData.totalTime}}分钟</span>-->
-              <span class="time"></span>
-              <el-button type="primary" size="small">点击查看文章详情</el-button>
             </div>
           </template>
           <el-collapse class="inner">
@@ -110,10 +110,16 @@
       </el-collapse>
     </div>
     <!--考生须知对话框-->
-    <el-dialog title="阅读须知" :visible.sync="dialogVisible" width="30%" v-if="examState==2">
+    <el-dialog title="读者须知" :visible.sync="dialogVisible" width="30%" v-if="examState==2">
       <span>未经允许禁止转载</span>
       <span slot="footer" class="dialog-footer">
         <el-button @click="dialogVisible = false">知道了</el-button>
+      </span>
+    </el-dialog>
+    <el-dialog title="好友分享" :visible.sync="dialogVisible2" width="30%" v-if="examState==2">
+      <span class="big loc">分享成功</span>
+      <span slot="footer" class="dialog-footer">
+        <el-button @click="dialogVisible2 = false">知道了</el-button>
       </span>
     </el-dialog>
 
@@ -129,16 +135,16 @@
         <li><i class="iconfont icon-share"></i></li>
         <li class="right">
           <div>
-            <span class="count">总分</span>
-            <span class="score">{{score[0]+score[1]+score[2]}}</span>
+            <span class="count">评分</span>
+            <span class="score">98</span>
           </div>
         </li>
       </ul>
       <ul class="bottom">
         <li>更新于{{examData.examDate}}</li>
         <li>来自 {{examData.institute}}</li>
-        <li class="btn">{{examData.type}}</li>
-        <li class="right"><el-button @click="toAnswer(examData.examCode)">开始答题</el-button></li>
+        <li class="btn">时事评论</li>
+        <li class="right"><el-button type="primary" icon="el-icon-share" @click="dialogVisible2 = true">好友分享</el-button></li>
       </ul>
       <ul class="info">
         <li @click="dialogVisible = true"><a href="javascript:;"><i class="iconfont icon-info"></i>读者须知</a></li>
@@ -149,10 +155,8 @@
         <el-collapse-item class="header" name="0">
           <template slot="title" class="stitle">
             <div class="title">
-              <span>中国共产党第二十次全国代表大会</span><i class="header-icon el-icon-info"></i>
+              <span>喜迎二十大</span><i class="header-icon el-icon-info"></i>
               <!--<span class="time">{{examData.totalScore}}分 / {{examData.totalTime}}分钟</span>-->
-              <span class="time"></span>
-              <el-button type="primary" size="small">点击查看文章详情</el-button>
             </div>
           </template>
           <el-collapse class="inner">
@@ -193,6 +197,12 @@
         <el-button @click="dialogVisible = false">知道了</el-button>
       </span>
     </el-dialog>
+    <el-dialog title="好友分享" :visible.sync="dialogVisible2" width="30%" v-if="examState==3">
+      <span class="big loc">分享成功</span>
+      <span slot="footer" class="dialog-footer">
+        <el-button @click="dialogVisible2 = false">知道了</el-button>
+      </span>
+    </el-dialog>
 
     <div class="title" v-if="examState==4">
       <span >思维方法学习</span>
@@ -205,16 +215,16 @@
         <li><i class="iconfont icon-share"></i></li>
         <li class="right">
           <div>
-            <span class="count">总分</span>
-            <span class="score">{{score[0]+score[1]+score[2]}}</span>
+            <span class="count">评分</span>
+            <span class="score">89</span>
           </div>
         </li>
       </ul>
       <ul class="bottom">
         <li>更新于{{examData.examDate}}</li>
         <li>来自 {{examData.institute}}</li>
-        <li class="btn">{{examData.type}}</li>
-        <li class="right"><el-button @click="toAnswer(examData.examCode)">开始答题</el-button></li>
+        <li class="btn">思维方法</li>
+        <li class="right"><el-button type="primary" icon="el-icon-share" @click="dialogVisible2 = true">好友分享</el-button></li>
       </ul>
       <ul class="info">
         <li @click="dialogVisible = true"><a href="javascript:;"><i class="iconfont icon-info"></i>读者须知</a></li>
@@ -227,8 +237,6 @@
             <div class="title">
               <span>唯物辩证思维方法学习</span><i class="header-icon el-icon-info"></i>
               <!--<span class="time">{{examData.totalScore}}分 / {{examData.totalTime}}分钟</span>-->
-              <span class="time"></span>
-              <el-button type="primary" size="small">点击查看文章详情</el-button>
             </div>
           </template>
           <el-collapse class="inner">
@@ -257,6 +265,12 @@
       <span>未经允许禁止转载</span>
       <span slot="footer" class="dialog-footer">
         <el-button @click="dialogVisible = false">知道了</el-button>
+      </span>
+    </el-dialog>
+    <el-dialog title="好友分享" :visible.sync="dialogVisible2" width="30%" v-if="examState==4">
+      <span class="big loc">分享成功</span>
+      <span slot="footer" class="dialog-footer">
+        <el-button @click="dialogVisible2 = false">知道了</el-button>
       </span>
     </el-dialog>
 
@@ -292,8 +306,6 @@
           <template slot="title" class="stitle" >
             <div class="title">
               <span>学习小测试</span><i class="header-icon el-icon-info"></i>
-              <span class="time">{{examData.totalScore}}分 / {{examData.totalTime}}分钟</span>
-              <el-button type="primary" size="small">点击查看试题详情</el-button>
             </div>
           </template>
           <el-collapse class="inner">
@@ -350,16 +362,16 @@
         <li><i class="iconfont icon-share"></i></li>
         <li class="right">
           <div>
-            <span class="count">总分</span>
-            <span class="score">{{score[0]+score[1]+score[2]}}</span>
+            <span class="count">评分</span>
+            <span class="score">85</span>
           </div>
         </li>
       </ul>
       <ul class="bottom">
         <li>更新于{{examData.examDate}}</li>
         <li>来自 {{examData.institute}}</li>
-        <li class="btn">{{examData.type}}</li>
-        <li class="right"><el-button @click="toAnswer(examData.examCode)">开始答题</el-button></li>
+        <li class="btn">视频辅导</li>
+        <li class="right"><el-button type="primary" icon="el-icon-share" @click="dialogVisible2 = true">好友分享</el-button></li>
       </ul>
       <ul class="info">
         <li @click="dialogVisible = true"><a href="javascript:;"><i class="iconfont icon-info"></i>读者须知</a></li>
@@ -372,8 +384,6 @@
             <div class="title">
               <span>宋浩的精彩讲解</span><i class="header-icon el-icon-info"></i>
               <!--<span class="time">{{examData.totalScore}}分 / {{examData.totalTime}}分钟</span>-->
-              <span class="time"></span>
-              <el-button type="primary" size="small">点击查看视频详情</el-button>
             </div>
           </template>
           <el-collapse class="inner">
@@ -390,6 +400,12 @@
         <el-button @click="dialogVisible = false">知道了</el-button>
       </span>
     </el-dialog>
+    <el-dialog title="好友分享" :visible.sync="dialogVisible2" width="30%" v-if="examState==6">
+      <span class="big loc">分享成功</span>
+      <span slot="footer" class="dialog-footer">
+        <el-button @click="dialogVisible2 = false">知道了</el-button>
+      </span>
+    </el-dialog>
 
 
   </div>
@@ -402,6 +418,7 @@ export default {
   data() {
     return {
       dialogVisible: false, //对话框属性
+      dialogVisible2: false, //对话框属性
       activeName: '0',  //默认打开序号
       topicCount: [],//每种类型题目的总数
       score: [],  //每种类型分数的总数
@@ -581,5 +598,11 @@ export default {
 }
 .wrapper .right div {
   position: relative;
+}
+.loc-right {
+  text-align: right;
+}
+.big {
+  font-size: 1.5em;
 }
 </style>

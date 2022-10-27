@@ -99,10 +99,10 @@
             </div>
             <div class="fill" v-if="currentType == 2">
               <div v-for="(item,currentIndex) in part" :key="currentIndex">
-                <el-input placeholder="请填在此处"
+                <el-input placeholder="请填在此处" type="textarea"
                   v-model="fillAnswer[index][currentIndex]"
                   clearable
-                  @blur="fillBG">
+                  @blur="fillBG" :autosize="{ minRows: 4, maxRows: 4}">
                 </el-input>
               </div>
               <div class="analysis" v-if="isPractice">

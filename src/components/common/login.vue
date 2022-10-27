@@ -34,13 +34,13 @@
     </el-row>
     <el-row class="footer">
       <el-col>
-        <p class="msg2">版权所有 ©2019 <!--重庆文理学院计科2班余晓江--> 保留所有权利 渝ICP备19001371号</p>
+        <p class="msg2">版权所有 ©2022 <!--华南理工大学软件工程周治平、谭嘉展、宋文林、关锦权、王乐--> 保留所有权利 </p>
       </el-col>
     </el-row>
     <section class="remind">
-      <span>管理员账号：9527</span>
+      <span>管理员账号：2333</span>
       <span>教师账号：20081001</span>
-      <span>学生账号：20154084</span>
+      <span>学生账号：20203048</span>
       <span>密码都是：123456</span>
     </section>
   </div>
@@ -57,7 +57,7 @@ export default {
       role: 2,
       labelPosition: 'left',
       formLabelAlign: {
-        username: '20154084',
+        username: '20203048',
         password: '123456'
       }
     }

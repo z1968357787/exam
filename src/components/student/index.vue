@@ -74,7 +74,7 @@ export default {
       this.$store.commit("practice", isPractice)
       this.$router.push({path:'/student'})
     },
-    written() { //跳转考试模式
+    written() { //跳转练习模式
       let isPractice = true
       this.$store.commit("practice", isPractice)
       this.$router.push({path:'/startExam'})

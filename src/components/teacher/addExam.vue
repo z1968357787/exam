@@ -60,8 +60,8 @@ export default {
           label: '模拟考试'
         },
         {
-          value: '普通测试',
-          label: '普通测试'
+          value: '普通练习',
+          label: '普通练习'
         },
         {
           value: '行政能力',

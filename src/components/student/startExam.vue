@@ -5,23 +5,25 @@
     <div class="wrapper">
       <ul class="top">
         <li class="order" >
-          <a @click="exam1()">
+          <a @click="exam(1)">
            <el-badge :value="12" class="item" type="primary">
-             <span>普通考试</span>
+             <span>普通练习</span>
            </el-badge>
           </a>
         </li>
         <li class="order">
-          <a @click="exam2()">
+          <a @click="exam(2)">
            <el-badge :value="1" class="item" type="primary">
              <span>行政能力</span>
            </el-badge>
           </a>
         </li>
         <li class="order">
-          <el-badge :value="2" class="item" type="primary">
+          <a @click="exam(3)">
+           <el-badge :value="2" class="item" type="primary">
             <span>申论能力</span>
-          </el-badge>
+           </el-badge>
+          </a>
         </li>
         <!--<li class="order">
           <el-badge :value="1" class="item">
@@ -34,7 +36,31 @@
       <div v-if="examState==1">
       </div>
       <ul class="paper" v-loading="loading" v-if="examState==1">
-        <li class="item" v-for="(item,index) in pagination.records" :key="index">
+        <li class="item" v-for="(item,index) in pagination.records" :key="index" v-if="item.type=='普通练习'">
+          <h4 @click="toExamMsg(item.examCode)">{{item.source}}</h4>
+          <p class="name">{{item.source}}-{{item.description}}</p>
+          <div class="info">
+            <i class="el-icon-loading"></i><span>{{item.examDate.substr(0,10)}}</span>
+            <i class="iconfont icon-icon-time"></i><span v-if="item.totalTime != null">限时{{item.totalTime}}分钟</span>
+            <i class="iconfont icon-fenshu"></i><span>满分{{item.totalScore}}分</span>
+          </div>
+        </li>
+      </ul>
+
+      <ul class="paper" v-loading="loading" v-if="examState==2">
+        <li class="item" v-for="(item,index) in pagination.records" :key="index" v-if="item.type=='行政能力'">
+          <h4 @click="toExamMsg(item.examCode)">{{item.source}}</h4>
+          <p class="name">{{item.source}}-{{item.description}}</p>
+          <div class="info">
+            <i class="el-icon-loading"></i><span>{{item.examDate.substr(0,10)}}</span>
+            <i class="iconfont icon-icon-time"></i><span v-if="item.totalTime != null">限时{{item.totalTime}}分钟</span>
+            <i class="iconfont icon-fenshu"></i><span>满分{{item.totalScore}}分</span>
+          </div>
+        </li>
+      </ul>
+
+      <ul class="paper" v-loading="loading" v-if="examState==3">
+        <li class="item" v-for="(item,index) in pagination.records" :key="index" v-if="item.type=='申论能力'">
           <h4 @click="toExamMsg(item.examCode)">{{item.source}}</h4>
           <p class="name">{{item.source}}-{{item.description}}</p>
           <div class="info">
@@ -74,7 +100,7 @@ export default {
       pagination: { //分页后的考试信息
         current: 1, //当前页
         total: null, //记录条数
-        size: 6 //每页条数
+        size: 40 //每页条数
       }
     }
   },
@@ -119,15 +145,17 @@ export default {
       })
     },
     //跳转到试卷详情页
-    toExamMsg(examCode) {
+    toExamMsg(examCode,data) {
+      /*if(data!=null){
+        this.$store.commit("practice", false)
+      }*/
       this.$router.push({path: '/examMsg', query: {examCode: examCode}})
       console.log(examCode)
     },
-    exam1() { //跳转考试模式
-      this.$data.examState=1;
-    },
-    exam2() { //跳转考试模式
-      this.$data.examState=2;
+    exam(examState) { //跳转考试模式
+      console.log(examState)
+      this.$data.examState=examState;
+
     }
   }
 }

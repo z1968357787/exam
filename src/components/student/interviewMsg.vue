@@ -3,12 +3,12 @@
   <div id="msg">
 
     <div class="title" v-if="examState==1">
-      <span >视频答疑</span>
-      <span>/  习题讲解</span>
+      <span >面试模块</span>
+      <span>/  面试基础</span>
     </div>
     <div class="wrapper" v-if="examState==1">
       <ul class="top">
-        <li class="example">习题讲解</li>
+        <li class="example">面试基础</li>
         <li><i class="iconfont icon-pen-"></i></li>
         <li><i class="iconfont icon-share"></i></li>
         <li class="right">
@@ -25,7 +25,7 @@
         <li class="right"><el-button @click="commit()">完成面试</el-button></li>
       </ul>
       <ul class="info">
-        <li @click="dialogVisible = true"><a href="javascript:;"><i class="iconfont icon-info"></i>读者须知</a></li>
+        <li @click="dialogVisible = true"><a href="javascript:;"><i class="iconfont icon-info"></i>面试须知</a></li>
       </ul>
     </div>
     <div class="content" v-if="examState==1">
@@ -33,10 +33,10 @@
         <el-collapse-item class="header" name="0">
           <template slot="title" class="stitle">
             <div class="title">
-              <span>宋浩的精彩讲解</span><i class="header-icon el-icon-info"></i>
+              <span>面试基础练习</span><i class="header-icon el-icon-info"></i>
               <!--<span class="time">{{examData.totalScore}}分 / {{examData.totalTime}}分钟</span>-->
-              <span class="time"></span>
-              <el-button type="primary" size="small">点击查看视频详情</el-button>
+              <span class="time">100分 / 20分钟</span>
+              <el-button type="primary" size="small">点击查看面试详情</el-button>
             </div>
           </template>
           <el-collapse class="inner">
@@ -56,7 +56,7 @@
       </el-collapse>
     </div>
     <!--考生须知对话框-->
-    <el-dialog title="阅读须知" :visible.sync="dialogVisible" width="30%" v-if="examState==1">
+    <el-dialog title="面试须知" :visible.sync="dialogVisible" width="30%" v-if="examState==1">
       <span>未经允许禁止转载</span>
       <span slot="footer" class="dialog-footer">
         <el-button @click="dialogVisible = false">知道了</el-button>
@@ -64,12 +64,12 @@
     </el-dialog>
 
     <div class="title" v-if="examState==2">
-      <span >视频答疑</span>
-      <span>/  习题讲解</span>
+      <span >面试模块</span>
+      <span>/  结构化面试</span>
     </div>
     <div class="wrapper" v-if="examState==2">
       <ul class="top">
-        <li class="example">习题讲解</li>
+        <li class="example">结构化面试</li>
         <li><i class="iconfont icon-pen-"></i></li>
         <li><i class="iconfont icon-share"></i></li>
         <li class="right">
@@ -86,7 +86,7 @@
         <li class="right"><el-button @click="commit()">完成面试</el-button></li>
       </ul>
       <ul class="info">
-        <li @click="dialogVisible = true"><a href="javascript:;"><i class="iconfont icon-info"></i>读者须知</a></li>
+        <li @click="dialogVisible = true"><a href="javascript:;"><i class="iconfont icon-info"></i>面试须知</a></li>
       </ul>
     </div>
     <div class="content" v-if="examState==2">
@@ -94,10 +94,10 @@
         <el-collapse-item class="header" name="0">
           <template slot="title" class="stitle">
             <div class="title">
-              <span>宋浩的精彩讲解</span><i class="header-icon el-icon-info"></i>
+              <span>结构化面试练习</span><i class="header-icon el-icon-info"></i>
               <!--<span class="time">{{examData.totalScore}}分 / {{examData.totalTime}}分钟</span>-->
-              <span class="time"></span>
-              <el-button type="primary" size="small">点击查看视频详情</el-button>
+              <span class="time">100分 / 20分钟</span>
+              <el-button type="primary" size="small">点击查看面试详情</el-button>
             </div>
           </template>
           <el-collapse class="inner">
@@ -116,7 +116,7 @@
       </el-collapse>
     </div>
     <!--考生须知对话框-->
-    <el-dialog title="阅读须知" :visible.sync="dialogVisible" width="30%" v-if="examState==2">
+    <el-dialog title="面试须知" :visible.sync="dialogVisible" width="30%" v-if="examState==2">
       <span>未经允许禁止转载</span>
       <span slot="footer" class="dialog-footer">
         <el-button @click="dialogVisible = false">知道了</el-button>
@@ -124,12 +124,12 @@
     </el-dialog>
 
     <div class="title" v-if="examState==3">
-      <span >视频答疑</span>
-      <span>/  习题讲解</span>
+      <span >面试模块</span>
+      <span>/  无领导小组讨论</span>
     </div>
     <div class="wrapper" v-if="examState==3">
       <ul class="top">
-        <li class="example">习题讲解</li>
+        <li class="example">无领导小组讨论</li>
         <li><i class="iconfont icon-pen-"></i></li>
         <li><i class="iconfont icon-share"></i></li>
         <li class="right">
@@ -154,10 +154,10 @@
         <el-collapse-item class="header" name="0">
           <template slot="title" class="stitle">
             <div class="title">
-              <span>宋浩的精彩讲解</span><i class="header-icon el-icon-info"></i>
+              <span>无领导小组讨论练习</span><i class="header-icon el-icon-info"></i>
               <!--<span class="time">{{examData.totalScore}}分 / {{examData.totalTime}}分钟</span>-->
-              <span class="time"></span>
-              <el-button type="primary" size="small">点击查看视频详情</el-button>
+              <span class="time">100分 / 20分钟</span>
+              <el-button type="primary" size="small">点击查看面试详情</el-button>
             </div>
           </template>
           <el-collapse class="inner">

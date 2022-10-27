@@ -8,7 +8,7 @@
       <ul>
         <li @click="openMsg()"><i class="iconfont icon-flag"></i>清明节放假通知</li>
         <li @click="openMsg()"><i class="iconfont icon-flag"></i>下周例行工作报告会</li>
-        <li @click="openMsg()"><i class="iconfont icon-flag"></i>关于毕业生答辩具体流程</li>
+        <li @click="openMsg()"><i class="iconfont icon-flag"></i>关于公务员面试具体流程</li>
       </ul>
     </div>
   </section>
@@ -21,7 +21,7 @@ export default {
       user: { //用户信息
         userName: null,
         userId: null
-      } 
+      }
     }
   },
   created() {

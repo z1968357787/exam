@@ -62,9 +62,20 @@
           <el-form-item label="总分">
             <el-input v-model="form.totalScore"></el-input>
           </el-form-item>
-          <el-form-item label="试卷类型">
-            <el-input v-model="form.type"></el-input>
+          <el-form-item label="考试类型">
+            <!--<el-input v-model="form.type"></el-input>-->
+            <el-select v-model="form.type" placeholder="考试类型">
+              <el-option
+                v-for="item in examSelect"
+                :key="item.value"
+                :label="item.label"
+                :value="item.value">
+              </el-option>
+            </el-select>
           </el-form-item>
+          <!--<el-form-item label="试卷类型">
+            <el-input v-model="form.type"></el-input>
+          </el-form-item>-->
           <el-form-item label="考生提示">
             <el-input type="textarea" v-model="form.tips"></el-input>
           </el-form-item>
@@ -82,6 +93,24 @@
 export default {
   data() {
     return {
+      examSelect: [ //考试类型
+        {
+          value: '模拟考试',
+          label: '模拟考试'
+        },
+        {
+          value: '普通练习',
+          label: '普通练习'
+        },
+        {
+          value: '行政能力',
+          label: '行政能力'
+        },
+        {
+          value: '申论能力',
+          label: '申论能力'
+        }
+      ],
       form: {}, //保存点击以后当前试卷的信息
       pagination: { //分页后的考试信息
         current: 1, //当前页

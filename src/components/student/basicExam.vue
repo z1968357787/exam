@@ -56,8 +56,8 @@
           <p class="name">心口如一，童臾无欺</p>
           <div class="info">
             <i class="el-icon-loading"></i><span>{{item.examDate.substr(0,10)}}</span>
-            <i class="iconfont icon-icon-time"></i><span v-if="item.totalTime != null">浏览次数 {{item.totalTime}}分钟</span>
-            <i class="iconfont icon-fenshu"></i><span>满分{{item.totalScore}}分</span>
+            <i class="iconfont icon-icon-time"></i><span v-if="item.totalTime != null">浏览次数 132次</span>
+            <i class="iconfont icon-fenshu"></i><span>发布人 周治平</span>
           </div>
         </li>
       </ul>
@@ -67,8 +67,8 @@
           <p class="name">周恩来</p>
           <div class="info">
             <i class="el-icon-loading"></i><span>{{item.examDate.substr(0,10)}}</span>
-            <i class="iconfont icon-icon-time"></i><span v-if="item.totalTime != null">浏览次数 {{item.totalTime}}分钟</span>
-            <i class="iconfont icon-fenshu"></i><span>满分{{item.totalScore}}分</span>
+            <i class="iconfont icon-icon-time"></i><span v-if="item.totalTime != null">浏览次数 591次</span>
+            <i class="iconfont icon-fenshu"></i><span>发布人 谭嘉展</span>
           </div>
         </li>
       </ul>
@@ -78,8 +78,8 @@
           <p class="name">中央广电总台国际在线</p>
           <div class="info">
             <i class="el-icon-loading"></i><span>{{item.examDate.substr(0,10)}}</span>
-            <i class="iconfont icon-icon-time"></i><span v-if="item.totalTime != null">浏览次数 {{item.totalTime}}分钟</span>
-            <i class="iconfont icon-fenshu"></i><span>满分{{item.totalScore}}分</span>
+            <i class="iconfont icon-icon-time"></i><span v-if="item.totalTime != null">浏览次数 156次</span>
+            <i class="iconfont icon-fenshu"></i><span>发布人 王乐</span>
           </div>
         </li>
       </ul>
@@ -89,8 +89,8 @@
           <p class="name">辩证唯物主义</p>
           <div class="info">
             <i class="el-icon-loading"></i><span>{{item.examDate.substr(0,10)}}</span>
-            <i class="iconfont icon-icon-time"></i><span v-if="item.totalTime != null">浏览次数 {{item.totalTime}}分钟</span>
-            <i class="iconfont icon-fenshu"></i><span>满分{{item.totalScore}}分</span>
+            <i class="iconfont icon-icon-time"></i><span v-if="item.totalTime != null">浏览次数 265次</span>
+            <i class="iconfont icon-fenshu"></i><span>发布人 宋文林</span>
           </div>
         </li>
       </ul>
@@ -111,8 +111,8 @@
           <p class="name">奇怪的知识又变多了呢</p>
           <div class="info">
             <i class="el-icon-loading"></i><span>{{item.examDate.substr(0,10)}}</span>
-            <i class="iconfont icon-icon-time"></i><span v-if="item.totalTime != null">浏览次数 {{item.totalTime}}分钟</span>
-            <i class="iconfont icon-fenshu"></i><span>满分{{item.totalScore}}分</span>
+            <i class="iconfont icon-icon-time"></i><span v-if="item.totalTime != null">浏览次数 278次</span>
+            <i class="iconfont icon-fenshu"></i><span>发布人 关锦权</span>
           </div>
         </li>
       </ul>

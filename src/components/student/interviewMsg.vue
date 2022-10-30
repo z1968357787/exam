@@ -14,7 +14,7 @@
         <li class="right">
           <div>
             <span class="count">总分</span>
-            <span class="score">{{score[0]+score[1]+score[2]}}</span>
+            <span class="score">100</span>
           </div>
         </li>
       </ul>
@@ -75,7 +75,7 @@
         <li class="right">
           <div>
             <span class="count">总分</span>
-            <span class="score">{{score[0]+score[1]+score[2]}}</span>
+            <span class="score">100</span>
           </div>
         </li>
       </ul>
@@ -135,7 +135,7 @@
         <li class="right">
           <div>
             <span class="count">总分</span>
-            <span class="score">{{score[0]+score[1]+score[2]}}</span>
+            <span class="score">100</span>
           </div>
         </li>
       </ul>

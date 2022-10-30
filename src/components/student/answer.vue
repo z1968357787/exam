@@ -457,7 +457,8 @@ export default {
               this.$router.push({path:'/studentScore',query: {
                 score: finalScore,
                 startTime: this.startTime,
-                endTime: this.endTime
+                endTime: this.endTime,
+                examCode: this.examData.examCode
               }})
             }
           })

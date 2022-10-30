@@ -1,8 +1,8 @@
 <template>
   <div class="score">
     <div class="title">
-      <p class="name">计算机网络</p>
-      <p class="description">(总分：100分,限时：100分钟)</p>
+      <p class="name">{{examData.source}}</p>
+      <p class="description">(总分：{{examData.totalScore}}分,限时：{{examData.totalTime}}分钟)</p>
       <p class="description">学生：大咸鱼</p>
     </div>
     <div class="total">
@@ -38,6 +38,7 @@ export default {
       isTransition: false, //是否渲染完成
       score: 0, //总分
       imgShow: false, //不及格图片显示
+      examData:null,
       imgSrc: {
         fail1: require("@/assets/img/cry1.gif"),
         fail2: require('@/assets/img/cry2.jpg'),
@@ -49,10 +50,32 @@ export default {
     }
   },
   created() {
+    this.init()
     this.transiton()
     this.getScore()
   },
   methods: {
+    init() {
+      let examCode = this.$route.query.examCode //获取路由传递过来的试卷编号
+      this.$axios(`/api/exam/${examCode}`).then(res => {  //通过examCode请求试卷详细信息
+        res.data.data.examDate = res.data.data.examDate.substr(0,10)
+        this.examData = { ...res.data.data}
+        let paperId = this.examData.paperId
+        this.$axios(`/api/paper/${paperId}`).then(res => {  //通过paperId获取试题题目信息
+          this.topic = {...res.data}
+          let keys = Object.keys(this.topic) //对象转数组
+          keys.forEach(e => {
+            let data = this.topic[e]
+            this.topicCount.push(data.length)
+            let currentScore = 0
+            for(let i = 0; i< data.length; i++) { //循环每种题型,计算出总分
+              currentScore += data[i].score
+            }
+            this.score.push(currentScore) //把每种题型总分存入score
+          })
+        })
+      })
+    },
     transiton() {  //一秒后过渡
       setTimeout(() => {
         this.isTransition = true
@@ -82,24 +105,24 @@ export default {
   }
   .img1Transform {
     opacity: 1 !important;
-    transform: translateX(30px) !important;  
+    transform: translateX(30px) !important;
     transition: all 0.6s ease !important;
   }
   .img2Transform {
     opacity: 1 !important;
-    transform: translateX(-30px) !important;  
+    transform: translateX(-30px) !important;
     transition: all 0.6s ease !important;
   }
   .img1 {
     margin-top: 70px;
     opacity: 0;
-    transform: translateX(0px);  
+    transform: translateX(0px);
     transition: all 0.6s ease;
   }
   .img2 {
     margin-top: 30px;
     opacity: 0;
-    transform: translateX(0px);  
+    transform: translateX(0px);
     transition: all 0.6s ease;
   }
 }
@@ -169,7 +192,7 @@ export default {
       margin-top: 80px;
       margin-bottom: 20px;
       transition: all 1s ease;
-      
+
       span:nth-child(1) {
         font-size: 36px;
         font-weight: 600;

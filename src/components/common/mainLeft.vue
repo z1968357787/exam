@@ -22,6 +22,7 @@
           <el-menu-item @click="handleTitle(item.index)" :index="list.path" style="color: whitesmoke" v-if="list.item1 != null">{{list.item1}}</el-menu-item>
           <el-menu-item @click="handleTitle(item.index)" :index="list.path" style="color: whitesmoke" v-if="list.item2 != null">{{list.item2}}</el-menu-item>
           <el-menu-item @click="handleTitle(item.index)" :index="list.path" style="color: whitesmoke" v-if="list.item3 != null">{{list.item3}}</el-menu-item>
+          <el-menu-item @click="handleTitle(item.index)" :index="list.path" style="color: whitesmoke" v-if="list.item4 != null">{{list.item4}}</el-menu-item>
         </el-menu-item-group>
       </el-submenu>
     </el-menu>
@@ -81,7 +82,7 @@ export default {
   width: 213px;
 }
 .el-menu-vertical-demo:not(.el-menu--collapse) {
-  min-height: 900px;
+  min-height: 1375px;
 }
 #left {
   height: 900px;

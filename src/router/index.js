@@ -58,8 +58,16 @@ export default new Router({
           component: () => import('@/components/teacher/addAnswer')
         },
         {
+          path: '/addInterview', //增加题库主界面
+          component: () => import('@/components/teacher/addInterview')
+        },
+        {
           path: '/addAnswerChildren', //点击试卷跳转到添加题库页面
           component: () => import('@/components/teacher/addAnswerChildren')
+        },
+        {
+          path: '/addInterviewChildren', //点击试卷跳转到添加题库页面
+          component: () => import('@/components/teacher/addInterviewChildren')
         },
         {
           path: '/studentManage', //学生管理界面

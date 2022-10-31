@@ -17,7 +17,7 @@ const state = {
       index: '2',
       title: '题库管理',
       icon: 'icon-tiku',
-      content:[{item1:'功能介绍',path:'/answerDescription'},{item2:'所有题库',path:'/selectAnswer'},{item3:'笔试题库',path:'/addAnswer'},{item4:'面试题库',path:'/addInterview'},],
+      content:[{item1:'功能介绍',path:'/answerDescription'},{item2:'所有题库',path:'/selectAnswer'},{item3:'笔试题库添加',path:'/addAnswer'},{item4:'面试题库添加',path:'/addInterview'},],
     },
     {
       index: '3',

@@ -64,7 +64,7 @@
       <ul class="paper" v-loading="loading" v-if="examState==2">
         <li class="item" v-for="(item,index) in pagination.records" :key="index">
           <h4 @click="toContentMsg(item.examCode,examState)">与肝胆人共事，无字句处读书</h4>
-          <p class="name">周恩来</p>
+          <p class="name">周恩来的名言警句</p>
           <div class="info">
             <i class="el-icon-loading"></i><span>{{item.examDate.substr(0,10)}}</span>
             <i class="iconfont icon-icon-time"></i><span v-if="item.totalTime != null">浏览次数 591次</span>

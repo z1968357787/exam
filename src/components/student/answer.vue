@@ -403,13 +403,13 @@ export default {
         }
         // console.log(topic1Answer)
       })
-      /**计算判断题总分 */
+      /**计算填空题题总分 */
       // console.log(`this.fillAnswer${this.fillAnswer}`)
       // console.log(this.topic[2][this.index])
       let fillAnswer = this.fillAnswer
       fillAnswer.forEach((element,index) => { //此处index和 this.index数据不一致，注意
         element.forEach((inner) => {
-          if(this.topic[2][index].answer.includes(inner)) { //判断填空答案是否与数据库一致
+          if(this.topic[2][index].answer.includes(inner)) { //判断填空答案是否与数据库一致，只要填了就有分
             console.log("正确")
             finalScore += this.topic[2][this.index].score
           }

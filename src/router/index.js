@@ -66,6 +66,14 @@ export default new Router({
           component: () => import('@/components/teacher/addAnswerChildren')
         },
         {
+          path: '/addBasic', //增加题库主界面
+          component: () => import('@/components/teacher/addBasic')
+        },
+        {
+          path: '/addBasicChildren', //点击试卷跳转到添加题库页面
+          component: () => import('@/components/teacher/addBasicChildren')
+        },
+        {
           path: '/addInterviewChildren', //点击试卷跳转到添加题库页面
           component: () => import('@/components/teacher/addInterviewChildren')
         },

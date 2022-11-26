@@ -4,7 +4,7 @@
     <el-table :data="pagination.records" border :row-class-name="tableRowClassName">
       <el-table-column fixed="left" prop="subject" label="试卷名称" width="180"></el-table-column>
       <el-table-column prop="question" label="题目信息" width="490"></el-table-column>
-      <el-table-column prop="section" label="所属章节" width="200"></el-table-column>
+      <el-table-column prop="section" label="所属知识点" width="200"></el-table-column>
       <el-table-column prop="type" label="题目类型" width="200"></el-table-column>
       <el-table-column prop="score" label="试题分数" width="150"></el-table-column>
       <el-table-column prop="level" label="难度等级" width="133"></el-table-column>
@@ -87,7 +87,7 @@ export default {
 }
   .el-table .warning-row {
     background: #000 !important;
-    
+
   }
 
   .el-table .success-row {

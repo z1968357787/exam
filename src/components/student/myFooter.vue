@@ -5,7 +5,6 @@
       <li><a href="javascript:;">关于我们</a></li>
       <li><a href="javascript:;">免责声明</a></li>
       <li><a href="javascript:;">使用协议</a></li>
-      <li>@Copyright 2022-2023. ALL Rights Reserved</li>
     </ul>
   </footer>
 </template>

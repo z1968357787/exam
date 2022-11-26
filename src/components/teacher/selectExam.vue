@@ -4,9 +4,10 @@
     <el-table :data="pagination.records" border>
       <el-table-column fixed="left" prop="source" label="试卷名称" width="180"></el-table-column>
       <el-table-column prop="description" label="介绍" width="200"></el-table-column>
+      <!--
       <el-table-column prop="institute" label="所属学院" width="120"></el-table-column>
       <el-table-column prop="major" label="所属专业" width="200"></el-table-column>
-      <el-table-column prop="grade" label="年级" width="100"></el-table-column>
+      <el-table-column prop="grade" label="年级" width="100"></el-table-column>-->
       <el-table-column prop="examDate" label="考试日期" width="120"></el-table-column>
       <el-table-column prop="totalTime" label="持续时间" width="120"></el-table-column>
       <el-table-column prop="totalScore" label="总分" width="120"></el-table-column>
@@ -42,6 +43,7 @@
           <el-form-item label="介绍">
             <el-input v-model="form.description"></el-input>
           </el-form-item>
+          <!--
           <el-form-item label="所属学院">
             <el-input v-model="form.institute"></el-input>
           </el-form-item>
@@ -50,17 +52,18 @@
           </el-form-item>
           <el-form-item label="年级">
             <el-input v-model="form.grade"></el-input>
-          </el-form-item>
-          <el-form-item label="考试日期">
-            <el-col :span="11">
-              <el-date-picker type="date" placeholder="选择日期" v-model="form.examDate" style="width: 100%;"></el-date-picker>
-            </el-col>
-          </el-form-item>
+          </el-form-item>-->
+
           <el-form-item label="持续时间">
             <el-input v-model="form.totalTime"></el-input>
           </el-form-item>
           <el-form-item label="总分">
             <el-input v-model="form.totalScore"></el-input>
+          </el-form-item>
+          <el-form-item label="考试日期">
+            <el-col :span="11">
+              <el-date-picker type="date" placeholder="选择日期" v-model="form.examDate" style="width: 100%;"></el-date-picker>
+            </el-col>
           </el-form-item>
           <el-form-item label="考试类型">
             <!--<el-input v-model="form.type"></el-input>-->

@@ -10,7 +10,7 @@
         <i class="el-icon-menu" @click="toggle()"></i>
         <div class="user">
           <span>{{user.userName}}</span>
-          <img src="@/assets/img/userimg.png" class="user-img" ref="img" @click="showSetting()" />
+          <img src="@/assets/img/userimg.jpg" class="user-img" ref="img" @click="showSetting()" />
           <transition name="fade">
             <div class="out" ref="out" v-show="login_flag">
               <ul>
@@ -83,7 +83,7 @@ export default {
 #topbar {
   position: relative;
   z-index: 10;
-  background-color: #124280;
+  background-color: #409EFF;
   height: 80px;
   line-height: 80px;
   color: #fff;

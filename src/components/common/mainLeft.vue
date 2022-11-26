@@ -9,7 +9,7 @@
       @open="handleOpen"
       @close="handleClose"
       :collapse="flag"
-      background-color="#124280"
+      background-color="#409EFF"
       menu-trigger="click" router>
       <el-submenu v-for="(item,index) in menu" :index='item.index' :key="index">
         <template slot="title">

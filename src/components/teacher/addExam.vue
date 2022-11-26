@@ -8,6 +8,7 @@
       <el-form-item label="介绍">
         <el-input v-model="form.description"></el-input>
       </el-form-item>
+      <!--
       <el-form-item label="所属学院">
         <el-input v-model="form.institute"></el-input>
       </el-form-item>
@@ -16,17 +17,17 @@
       </el-form-item>
       <el-form-item label="年级">
         <el-input v-model="form.grade"></el-input>
-      </el-form-item>
-      <el-form-item label="考试日期">
-        <el-col :span="11">
-          <el-date-picker placeholder="选择日期" v-model="form.examDate" style="width: 100%;"></el-date-picker>
-        </el-col>
-      </el-form-item>
+      </el-form-item>-->
       <el-form-item label="持续时间">
         <el-input v-model="form.totalTime"></el-input>
       </el-form-item>
       <el-form-item label="总分">
         <el-input v-model="form.totalScore"></el-input>
+      </el-form-item>
+      <el-form-item label="考试日期">
+        <el-col :span="11">
+          <el-date-picker placeholder="选择日期" v-model="form.examDate" style="width: 100%;"></el-date-picker>
+        </el-col>
       </el-form-item>
       <el-form-item label="考试类型">
         <!--<el-input v-model="form.type"></el-input>-->

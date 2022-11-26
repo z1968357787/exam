@@ -39,10 +39,10 @@ export default {
       score: 0, //总分
       imgShow: false, //不及格图片显示
       imgSrc: {
-        fail1: require("@/assets/img/cry1.gif"),
-        fail2: require('@/assets/img/cry2.jpg'),
-        pass1: require('@/assets/img/good1.jpg'),
-        pass2: require('@/assets/img/good2.gif')
+        fail1: require("@/assets/img/cry1.jpg"),
+        fail2: require('@/assets/img/cry3.jpg'),
+        pass1: require('@/assets/img/well1.jpg'),
+        pass2: require('@/assets/img/well3.jpg')
       },
       startTime: null, //考试开始时间
       endTime: null, //考试结束时间

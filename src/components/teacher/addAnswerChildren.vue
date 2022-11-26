@@ -18,27 +18,27 @@
             </el-select>
           </li>
           <li v-if="optionValue == '选择题'">
-            <span>所属章节：</span>
+            <span>所属知识点：</span>
             <el-input
-              placeholder="请输入对应章节"
+              placeholder="请输入对应知识点"
               v-model="postChange.section"
               class="w150"
               clearable>
             </el-input>
           </li>
           <li v-if="optionValue == '填空题'">
-            <span>所属章节：</span>
+            <span>所属知识点：</span>
             <el-input
-              placeholder="请输入对应章节"
+              placeholder="请输入对应知识点"
               v-model="postFill.section"
               class="w150"
               clearable>
             </el-input>
           </li>
           <li v-if="optionValue == '判断题'">
-            <span>所属章节：</span>
+            <span>所属知识点：</span>
             <el-input
-              placeholder="请输入对应章节"
+              placeholder="请输入对应知识点"
               v-model="postJudge.section"
               class="w150"
               clearable>
@@ -335,7 +335,7 @@ export default {
       subject: '', //试卷名称用来接收路由参数
       postChange: { //选择题提交内容
         subject: '', //试卷名称
-        level: '', //难度等级选中值 
+        level: '', //难度等级选中值
         rightAnswer: '', //正确答案选中值
         section: '', //对应章节
         question: '', //题目
@@ -347,7 +347,7 @@ export default {
       },
       postFill: { //填空题提交内容
         subject: '', //试卷名称
-        level: '', //难度等级选中值 
+        level: '', //难度等级选中值
         answer: '', //正确答案
         section: '', //对应章节
         question: '', //题目
@@ -355,7 +355,7 @@ export default {
       },
       postJudge: { //判断题提交内容
         subject: '', //试卷名称
-        level: '', //难度等级选中值 
+        level: '', //难度等级选中值
         answer: '', //正确答案
         section: '', //对应章节
         question: '', //题目
@@ -419,7 +419,7 @@ export default {
         url: '/api/MultiQuestion',
         method: 'post',
         data: {
-          ...this.postChange          
+          ...this.postChange
         }
       }).then(res => { //添加成功显示提示
         let status = res.data.code
@@ -584,7 +584,7 @@ export default {
         display: flex;
         justify-content: center;
         align-items: center;
-      }        
+      }
     }
     .fill {
       .fillAnswer {
@@ -610,7 +610,7 @@ export default {
       }
     }
     .w150 {
-      width: 150px;
+      width: 170px;
     }
     li:nth-child(2) {
       display: flex;

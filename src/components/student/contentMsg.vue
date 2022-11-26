@@ -20,7 +20,7 @@
       </ul>
       <ul class="bottom">
         <li>更新于{{examData.examDate}}</li>
-        <li>来自 {{examData.institute}}</li>
+        <li>来自 周治平的分享</li>
         <li class="btn">好文章读背</li>
         <li class="right"><el-button type="primary" icon="el-icon-share" @click="dialogVisible2 = true">好友分享</el-button></li>
       </ul>
@@ -79,7 +79,7 @@
       </ul>
       <ul class="bottom">
         <li>更新于{{examData.examDate}}</li>
-        <li>来自 {{examData.institute}}</li>
+        <li>来自 谭嘉展的分享</li>
         <li class="btn">名言名句</li>
         <li class="right"><el-button type="primary" icon="el-icon-share" @click="dialogVisible2 = true">好友分享</el-button></li>
       </ul>
@@ -142,7 +142,7 @@
       </ul>
       <ul class="bottom">
         <li>更新于{{examData.examDate}}</li>
-        <li>来自 {{examData.institute}}</li>
+        <li>来自 王乐的分享</li>
         <li class="btn">时事评论</li>
         <li class="right"><el-button type="primary" icon="el-icon-share" @click="dialogVisible2 = true">好友分享</el-button></li>
       </ul>
@@ -222,7 +222,7 @@
       </ul>
       <ul class="bottom">
         <li>更新于{{examData.examDate}}</li>
-        <li>来自 {{examData.institute}}</li>
+        <li>来自 宋文林的分享</li>
         <li class="btn">思维方法</li>
         <li class="right"><el-button type="primary" icon="el-icon-share" @click="dialogVisible2 = true">好友分享</el-button></li>
       </ul>
@@ -369,7 +369,7 @@
       </ul>
       <ul class="bottom">
         <li>更新于{{examData.examDate}}</li>
-        <li>来自 {{examData.institute}}</li>
+        <li>来自 关锦权的分享</li>
         <li class="btn">视频辅导</li>
         <li class="right"><el-button type="primary" icon="el-icon-share" @click="dialogVisible2 = true">好友分享</el-button></li>
       </ul>

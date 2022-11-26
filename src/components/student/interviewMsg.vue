@@ -20,8 +20,8 @@
       </ul>
       <ul class="bottom">
         <li>更新于{{examData.examDate}}</li>
-        <li>来自 {{examData.institute}}</li>
-        <li class="btn">{{examData.type}}</li>
+        <li>来自 最帅的zzp</li>
+        <li class="btn">面试学习</li>
         <li class="right"><el-button @click="commit()">完成面试</el-button></li>
       </ul>
       <ul class="info">
@@ -81,8 +81,8 @@
       </ul>
       <ul class="bottom">
         <li>更新于{{examData.examDate}}</li>
-        <li>来自 {{examData.institute}}</li>
-        <li class="btn">{{examData.type}}</li>
+        <li>来自 最帅的zzp</li>
+        <li class="btn">面试学习</li>
         <li class="right"><el-button @click="commit()">完成面试</el-button></li>
       </ul>
       <ul class="info">
@@ -141,8 +141,8 @@
       </ul>
       <ul class="bottom">
         <li>更新于{{examData.examDate}}</li>
-        <li>来自 {{examData.institute}}</li>
-        <li class="btn">{{examData.type}}</li>
+        <li>来自 最帅的dadada</li>
+        <li class="btn">面试学习</li>
         <li class="right"><el-button @click="commit()">完成面试</el-button></li>
       </ul>
       <ul class="info">

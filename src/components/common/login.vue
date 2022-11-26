@@ -9,7 +9,7 @@
         </div>
         <div class="bottom">
           <div class="container">
-            <p class="title">账号登录</p>
+            <p class="title">用户登录</p>
             <el-form :label-position="labelPosition" label-width="80px" :model="formLabelAlign">
               <el-form-item label="用户名">
                 <el-input v-model.number="formLabelAlign.username" placeholder="请输入用户名"></el-input>
@@ -34,13 +34,13 @@
     </el-row>
     <el-row class="footer">
       <el-col>
-        <p class="msg2">版权所有 ©2022 <!--华南理工大学软件工程周治平、谭嘉展、宋文林、关锦权、王乐--> 保留所有权利 </p>
+
       </el-col>
     </el-row>
     <section class="remind">
-      <span>管理员账号：2333</span>
-      <span>教师账号：20081001</span>
-      <span>学生账号：20203048</span>
+      <span>超级管理员账号：2333</span>
+      <span>管理员账号：20081001</span>
+      <span>用户账号：20203048</span>
       <span>密码都是：123456</span>
     </section>
   </div>
@@ -152,7 +152,7 @@ a:link {
   overflow-y: auto;
   height: 100%;
   background: url('../../assets/img/loginbg.png')center top / cover no-repeat;
-  background-color: #b6bccdd1 !important;
+  background-color: #FFFFFF !important;
 }
 #login .main-container {
   display: flex;

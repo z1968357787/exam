@@ -4,8 +4,9 @@
     <el-row class="padding-50">
       <el-col :span="24">
         <ul class="list">
-          <li class="logo"><i class="iconfont icon-kaoshi"></i><span>Exam-Online</span></li>
-          <li><a href="javascript:;" @click="exam()">模拟考试</a></li>
+          <li class="logo"><i class="iconfont icon-kaoshi"></i><span>在线考试系统</span></li>
+          <!--
+          <li><a href="javascript:;" @click="exam()">模拟考试</a></li>-->
           <li><a href="javascript:;" @click="written()">笔试模块</a></li>
           <li><a href="javascript:;" @click="interview()">面试模块</a></li>
           <li><a href="javascript:;" @click="practice()">基础模块</a></li>

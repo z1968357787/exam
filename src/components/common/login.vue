@@ -5,7 +5,9 @@
     <el-row class="main-container">
       <el-col :lg="8" :xs="16" :md="10" :span="10">
         <div class="top">
-          <i class="iconfont icon-kaoshi"></i><span class="title">在线考试系统</span>
+
+          <i class="iconfont icon-kaoshi"></i>
+          <span class="title">在线考试系统</span>
         </div>
         <div class="bottom">
           <div class="container">
@@ -151,7 +153,8 @@ a:link {
   width: 100%;
   overflow-y: auto;
   height: 100%;
-  background: url('../../assets/img/loginbg.png')center top / cover no-repeat;
+
+
   background-color: #FFFFFF !important;
 }
 #login .main-container {

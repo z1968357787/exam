@@ -33,10 +33,11 @@
                 <a href="javascript:;"></a>
                 <span>已答</span>
               </li>
+              <!--
               <li>
                 <a href="javascript:;"></a>
                 <span>标记</span>
-              </li>
+              </li>-->
             </ul>
             <div class="l-bottom">
               <div class="item">
@@ -128,9 +129,11 @@
             </div>
           </div>
           <div class="operation">
+
             <ul class="end">
               <li @click="previous()"><i class="iconfont icon-previous"></i><span>上一题</span></li>
-              <li @click="mark()"><i class="iconfont icon-mark-o"></i><span>标记</span></li>
+
+              <li></li>
               <li @click="next()"><span>下一题</span><i class="iconfont icon-next"></i></li>
             </ul>
           </div>
@@ -558,7 +561,7 @@ export default {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: rgb(39, 118, 223);
+  background-color: #FFFFFF;
   border-radius: 50%;
   width: 50px;
   height: 50px;

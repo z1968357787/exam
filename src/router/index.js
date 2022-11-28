@@ -70,6 +70,10 @@ export default new Router({
           component: () => import('@/components/teacher/addBasic')
         },
         {
+          path: '/selectBasic', //增加题库主界面
+          component: () => import('@/components/teacher/selectBasic')
+        },
+        {
           path: '/addBasicChildren', //点击试卷跳转到添加题库页面
           component: () => import('@/components/teacher/addBasicChildren')
         },
@@ -99,7 +103,7 @@ export default new Router({
       path: '/student',
       component: () => import('@/components/student/index'),
       children: [
-        {path:"/",component: ()=> import('@/components/student/myExam')},
+        {path:"/",component: ()=> import('@/components/student/startExam')},
         {path:'/startExam', component: () => import('@/components/student/startExam')},
         {path: '/manager', component: () => import('@/components/student/manager')},
         {path: '/examMsg', component: () => import('@/components/student/examMsg')},

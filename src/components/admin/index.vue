@@ -26,11 +26,11 @@ export default {
   },
   data() {
     return {
-      username: '许如梦'
+      username: '周治平'
     }
   },
   methods: {
-    
+
   }
 }
 </script>

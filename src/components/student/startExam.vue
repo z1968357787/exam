@@ -4,13 +4,14 @@
     <div class="title">我的练习</div>
     <div class="wrapper">
       <ul class="top">
+        <!--
         <li class="order" >
           <a @click="exam(1)">
            <el-badge :value="12" class="item" type="primary">
              <span>普通练习</span>
            </el-badge>
           </a>
-        </li>
+        </li>-->
         <li class="order">
           <a @click="exam(2)">
            <el-badge :value="1" class="item" type="primary">
@@ -96,7 +97,7 @@ export default {
       loading: false,
       key: null, //搜索关键字
       allExam: null, //所有考试信息
-      examState: 1,
+      examState: 2,
       pagination: { //分页后的考试信息
         current: 1, //当前页
         total: null, //记录条数

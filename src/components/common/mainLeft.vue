@@ -24,6 +24,7 @@
           <el-menu-item @click="handleTitle(item.index)" :index="list.path" style="color: whitesmoke" v-if="list.item3 != null">{{list.item3}}</el-menu-item>
           <el-menu-item @click="handleTitle(item.index)" :index="list.path" style="color: whitesmoke" v-if="list.item4 != null">{{list.item4}}</el-menu-item>
           <el-menu-item @click="handleTitle(item.index)" :index="list.path" style="color: whitesmoke" v-if="list.item5 != null">{{list.item5}}</el-menu-item>
+          <el-menu-item @click="handleTitle(item.index)" :index="list.path" style="color: whitesmoke" v-if="list.item6 != null">{{list.item6}}</el-menu-item>
         </el-menu-item-group>
       </el-submenu>
     </el-menu>

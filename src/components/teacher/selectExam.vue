@@ -98,20 +98,24 @@ export default {
     return {
       examSelect: [ //考试类型
         {
-          value: '模拟考试',
-          label: '模拟考试'
-        },
-        {
-          value: '普通练习',
-          label: '普通练习'
-        },
-        {
           value: '行政能力',
           label: '行政能力'
         },
         {
           value: '申论能力',
           label: '申论能力'
+        },
+        {
+          value: '面试基础',
+          label: '面试基础'
+        },
+        {
+          value: '结构化面试',
+          label: '结构化面试'
+        },
+        {
+          value: '无领导小组讨论',
+          label: '无领导小组讨论'
         }
       ],
       form: {}, //保存点击以后当前试卷的信息

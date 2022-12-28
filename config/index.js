@@ -12,7 +12,7 @@ module.exports = {
     assetsPublicPath: '/',
     proxyTable: {
       '/api': {
-        target: 'http://47.99.148.82:8080',//本地地址
+        target: 'http://localhost:8080',//本地地址
         // target: 'https://xttblog.com',// 线上部署地址
         changeOrigin: true,
         pathRewrite: {
